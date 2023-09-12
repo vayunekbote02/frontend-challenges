@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pb: "hsl(225, 100%, 94%)",
+              bb: "hsl(245, 75%, 52%)",
+              vpb: "hsl(225, 100%, 98%)",
+              deb: "hsl(224, 23%, 55%)",
+              db: "hsl(223, 47%, 23%)",
+            },
+            fontFamily: {
+              redhat: ["Red Hat Display", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Order summary card</title>
+  </head>
+  <body class="flex flex-col min-h-screen bg-pb relative">
+    <!--    Change
+    Proceed to Payment Cancel Order -->
+    <!-- Background Image -->
+    <img
+      src="./images/pattern-background-desktop.svg"
+      alt=""
+      class="absolute inset-0"
+    />
+    <!-- Main Content -->
+    <div class="flex flex-grow justify-center items-center">
+      <!-- Main Div -->
+      <div
+        class="flex flex-col w-[300px] md:w-[350px] rounded-xl bg-white z-10 overflow-hidden"
+      >
+        <!-- Image Div -->
+        <div class="">
+          <img
+            src="./images/illustration-hero.svg"
+            alt="Main character"
+            class=""
+          />
+        </div>
+        <!-- Main content section -->
+        <section class="p-6 md:p-9 flex flex-col items-center">
+          <h1 class="text-db text-xl font-redhat font-black">Order Summary</h1>
+          <p
+            class="px-4 text-sm md:text-xs text-center font-redhat font-medium text-deb mt-3 md:mt-4 leading-6 md:leading-5"
+          >
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="flex justify-around w-full items-center mt-9 text-sm">
+            <div class="flex gap-4">
+              <img
+                src="./images/icon-music.svg"
+                alt="Music Icon"
+                class="h-10"
+              />
+              <div class="flex flex-col">
+                <p class="text-db font-redhat font-bold">Annual Plan</p>
+                <p class="text-deb font-redhat font-medium">$59.99/year</p>
+              </div>
+            </div>
+            <p
+              class="text-bb font-redhat font-bold underline hover:no-underline hover:text-bb/80 cursor-pointer"
+            >
+              Change
+            </p>
+          </div>
+          <button
+            class="mt-8 md:mt-10 w-full rounded-xl bg-bb p-3 font-redhat font-bold text-white text-sm shadow-lg shadow-gray-400 hover:bg-bb/80 cursor-pointer"
+          >
+            Proceed to Payment
+          </button>
+          <p
+            class="font-redhat font-black text-deb text-sm md: text-xs mt-5 md:mt-6 hover:text-db cursor-pointer"
+          >
+            Cancel Order
+          </p>
+        </section>
+      </div>
+    </div>
+    <!-- Credits -->
+    <div class="absolute bottom-0 left-0 text-bb">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        class="text-lime-500"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/vayunekbote02"
+        target="_blank"
+        class="text-teal-500"
+        >Vayun Ekbote</a
+      >.
+    </div>
+  </body>
+</html>
