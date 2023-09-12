@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sb: "hsl(215, 51%, 70%)",
+              mbg: "hsl(217, 54%, 11%)",
+              cbg: "hsl(216, 50%, 16%)",
+              line: "hsl(215, 32%, 27%)",
+            },
+            fontFamily: {
+              outfit: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>NFT preview card component</title>
+  </head>
+  <body class="h-screen flex flex-col bg-mbg">
+    <div class="flex flex-grow items-center justify-center">
+      <div class="flex flex-col w-[290px] bg-cbg rounded-lg">
+        <!-- Image Div -->
+        <div class="p-5">
+          <div class="relative">
+            <!-- Image -->
+            <img
+              src="./images/image-equilibrium.jpg"
+              alt="Floating prism"
+              class="rounded-lg"
+            />
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 bg-cyan-300 rounded-lg bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex justify-center items-center cursor-pointer"
+            >
+              <img src="./images/icon-view.svg" alt="" class="w-8 h-8" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Content section -->
+        <section class="text-white pl-5 pr-5 pb-5">
+          <h1
+            class="font-outfit font-semibold text-xl hover:text-cyan-300 cursor-pointer"
+          >
+            Equilibrium #3429
+          </h1>
+          <p class="mt-3 text-sb text-sm font-outfit font-light">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <!-- ETH and time remaining div -->
+          <div class="flex justify-between mt-3 text-sm">
+            <span
+              class="flex gap-1 items-center text-cyan-300 font-outfit font-400"
+              ><img src="./images/icon-ethereum.svg" alt="" class="h-4" />0.041
+              ETH</span
+            >
+            <span class="flex gap-2 items-center text-sb font-outfit font-300"
+              ><img src="./images/icon-clock.svg" alt="" class="h-4" />3 days
+              left</span
+            >
+          </div>
+          <hr class="h-px mt-3 bg-line border-0 dark:bg-line" />
+          <!-- Creator div -->
+          <div class="flex gap-3 pt-3 items-center">
+            <img
+              src="./images/image-avatar.png"
+              alt=""
+              class="h-7 rounded-full border-white border-[1px]"
+            />
+            <p class="text-xs tracking-wide font-outfit font-300 text-sb">
+              Creation of
+              <span class="text-white hover:text-cyan-300 cursor-pointer"
+                >Jules Wyvern</span
+              >
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 text-white">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        class="text-lime-500"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/vayunekbote02"
+        target="_blank"
+        class="text-teal-500"
+        >Vayun Ekbote</a
+      >.
+    </div>
+  </body>
+</html>
