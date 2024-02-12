@@ -1,0 +1,40 @@
+Will work play.tailwindcss.com
+
+HTML
+<div class="m-4">
+<div class="flex justify-center items-center">
+  <div class="flex flex-col items-center gap-1 w-48 text-center">
+    <div class="box-primary rounded-t-xl">StackBlitz</div>
+    <div class="box-primary">Labs</div>
+    <div class="box-primary">Astro</div>
+    <div class="box-primary">storyblok</div>
+    <div class="box-primary">bit</div>
+    <div class="grid grid-cols-2 w-full gap-1">
+      <div class="box-secondary text-sm">tailwind labs</div>
+      <div class="box-secondary">VueJobs</div>
+    </div>
+    <div class="grid grid-cols-2 w-full gap-1">
+      <div class="box-secondary">&#60div&#62RIOTS</div>
+      <div class="box-secondary">PREFECT</div>
+    </div>
+    <div class="grid grid-cols-2 w-full gap-1">
+      <div class="box-secondary">JET BRAINS</div>
+      <div class="box-secondary">MUX</div>
+    </div>
+    <div class="grid grid-cols-2 w-full gap-1">
+      <div class="box-secondary rounded-bl-xl">Remix</div>
+      <div class="box-secondary rounded-br-xl text-sm">Transloadit</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+CSS
+.box-primary {
+  @apply w-full cursor-pointer bg-gray-700 px-12 py-7 text-white duration-100 ease-in hover:bg-white hover:text-black hover:outline hover:outline-black;
+}
+
+.box-secondary {
+  @apply col-span-1 cursor-pointer bg-gray-700 py-7 text-white duration-100 ease-in hover:bg-white hover:text-black hover:outline hover:outline-black;
+}
